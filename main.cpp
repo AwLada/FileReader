@@ -11,28 +11,32 @@ int main()
   fstream fileStream; //to open a file for reading
 
   cout<<"What file do you want to open? ";
+  
   getline(cin, fileName);
   
-  //STEP 1: open the fileStream for input, using the fileName specified
-fileStream.open("fileName",ios::in);
+  fileStream.open(fileName,ios::in);
 
 
+  //
+  if    (fileStream.is_open())
 
-  if(fileStream.in) /*STEP 2: check to see if the fileStream successfully opened*/
   {
-    cout<<fileName<<" opened.\nFILE CONTENTS:\n";
+   cout<<fileName<<" opened.\nFILE CONTENTS:\n";
     
-    //STEP 3: repeat the following until the end-of-file (eof) has been reached...
-    while (fileStream.in && !fileStream.eof())// 3A: read a line from fileStream into the variable line
-    {
+   //
+   while (fileStream.is_open() && !fileStream.eof())
+   {
             getline(fileStream,line);
             cout<<line<<endl;
-    }
-
-            // 3B: display the line, followed by an endline
+            //fileStream.close();
+   }
+   
+   //
+   fileStream.close();
+                                                                               // 3B: display the line, followed by an endline
   
-    //STEP 4: close the fileStream
-  fileStream.close();
+                                                                                         //STEP 4: close the fileStream
+ 
   }
   else
   {
