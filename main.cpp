@@ -29,10 +29,11 @@ do
    while (fileStream.is_open() && !fileStream.eof())
    {
             getline(fileStream,line);
-            cout<<line<<endl;
+        
             
             if (!line.empty())
             {
+                cout<<line<<endl:
                 number += 1;          
                 lineLength += line.length();
             }
