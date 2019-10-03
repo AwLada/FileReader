@@ -8,8 +8,8 @@ int main()
 {
 char last;
 
-do
- {
+//do
+ //{
   string fileName; //to get the name of the file to open
   string line; //to store a single line of a text file
   fstream fileStream; //to open a file for reading
@@ -31,12 +31,12 @@ do
             getline(fileStream,line);
         
             
-            if (!line.empty())
-            {
+           // if (!line.empty())
+            //{
                 cout<<line<<endl;
-                number += 1;          
-                lineLength += line.length();
-            }
+              //  number += 1;          
+               // lineLength += line.length();
+            //}
    }
    
    fileStream.close();
@@ -47,15 +47,15 @@ do
   {
     cout<<fileName<<" could not be opened.\n";
   }
-  cout<<"METADATA"<<endl;
-  cout<<"File: "<<fileName<<endl;
-  cout<<"Lines: "<<number<<endl;
-  cout<<"Characters: "<<lineLength<<endl;
-  cout<<"Analyze another file (y/n)? ";
-  cin>>last;
-  cin.ignore();
-}
-  while(toupper (last) == 'Y');
+  //cout<<"METADATA"<<endl;
+  //cout<<"File: "<<fileName<<endl;
+  //cout<<"Lines: "<<number<<endl;
+  //cout<<"Characters: "<<lineLength<<endl;
+  //cout<<"Analyze another file (y/n)? ";
+  //cin>>last;
+  //cin.ignore();
+//}
+  //while(toupper (last) == 'Y');
   
     
  
