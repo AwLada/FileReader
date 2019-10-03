@@ -50,7 +50,7 @@ do
   cout<<"File: "<<fileName<<endl;
   cout<<"Lines: "<<number<<endl;
   cout<<"Characters: "<<lineLength<<endl;
-  cout<<"Analyze another file (y/n)?"<<endl;
+  cout<<"Analyze another file (y/n)? ";
   cin>>last;
   cin.ignore();
 }
