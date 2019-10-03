@@ -33,7 +33,7 @@ do
             
             if (!line.empty())
             {
-                cout<<line<<endl:
+                cout<<line<<endl;
                 number += 1;          
                 lineLength += line.length();
             }
