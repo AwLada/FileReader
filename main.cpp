@@ -20,7 +20,7 @@ do
   
   getline(cin, fileName);
   
-  fileStream.open(fileName,ios::in);
+  fileStream.open(fileName.c_str(),ios::in);
 
   if    (fileStream.is_open())
   {
